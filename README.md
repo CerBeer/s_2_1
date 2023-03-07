@@ -15,12 +15,19 @@ git init
 git add .
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/CerBeer/s_1_9.git
+git remote add origin https://github.com/CerBeer/s_2_1.git
 git push -u origin main
 git status
 
-git commit -m "text"
-git push -u origin master
+
+sudo apt-get update
+sudo apt-get install -y python3.5
+sudo apt-get install -y python3.5-dev
+sudo unlink /usr/bin/python3
+sudo ln -s /usr/bin/python3.5 /usr/bin/python3
+sudo pip3 install --upgrade pip
+sudo pip3 install --upgrade django==2.1
+sudo pip3 install --upgrade gunicorn
 
 
 sudo apt-get update
@@ -43,6 +50,12 @@ git clone https://github.com/CerBeer/s_2_1.git /home/box/web
 chmod a+x /home/box/web/init.sh
 /home/box/web/init.sh
 cd /home/box/web
+
+sudo django-admin.py startproject ask
+cd ask
+sudo manage.py startapp qa
+
+
 sudo ./init.sh
 sudo gunicorn -b 0.0.0.0:8080 hello:wsgi_application
 
