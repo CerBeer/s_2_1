@@ -11,6 +11,6 @@ sudo curl "https://bootstrap.pypa.io/pip/3.5/get-pip.py" -o "get-pip.py"
 sudo python3.5 get-pip.py
 sudo pip3 install --upgrade django==2.1
 sudo pip3 install --upgrade gunicorn
-sudo pip3 install --upgrade mysqlclient
 
+cd /home/box/web
 bash ./i_django.sh

@@ -14,18 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from ask.views import index
-from qa.views import mainPage
-from qa.views import ask
-from qa.views import popular, signup, loginPage, LogoutPage
+from django.conf.urls import url, include
+
+from qa import views
+
 
 urlpatterns = [
-    path('', mainPage),
-    path('login/', loginPage),
-    path('logout/', LogoutPage),
-    path('signup/', signup),
-    path('question/',include('qa.urls')),
-    path('ask/', ask, name = 'ask'),
-    path('popular/', popular, name = 'popular')
+    url(r'^admin/', admin.site.urls),
+    url(r'^$', views.test),
+    url(r'^login/$', views.test),
+    url(r'^signup/$', views.test),
+    url(r'^question/\d+/$', views.test),
+    url(r'^ask/$', views.test),
+    url(r'^popular/$', views.test),
+    url(r'^new/$', views.test),
 ]
