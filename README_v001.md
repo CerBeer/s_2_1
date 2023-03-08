@@ -84,3 +84,17 @@ sudo gunicorn -b 0.0.0.0:8080 hello:wsgi_application
 
 nginx configtest
 pkill nginx
+
+
+
+﻿curl http://localhost/﻿
+OK ﻿
+$ ﻿curl http://localhost/login/
+OK ﻿
+$ ﻿curl http://localhost/question/123/
+OK 
+$ ﻿curl http://localhost/ask/
+OK 
+$ ﻿curl http://localhost/popular/
+OK ﻿
+$ ﻿curl http://localhost/new/
