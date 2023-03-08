@@ -1,4 +1,3 @@
-git clone https://github.com/CerBeer/s_2_1.git /home/box/web
 cd /home/box/web
 django-admin startproject ask
 cd ask
