@@ -18,8 +18,9 @@ git branch -M main
 git remote add origin https://github.com/CerBeer/s_2_1.git
 git push -u origin main
 git status
+git pull
 
-
+# 001
 sudo apt-get update
 sudo apt-get install -y python3.5
 sudo apt-get install -y python3.5-dev
@@ -29,7 +30,7 @@ sudo pip3 install --upgrade pip
 sudo pip3 install --upgrade django==2.1
 sudo pip3 install --upgrade gunicorn
 
-
+# 002
 sudo apt-get update
 sudo apt-get install -f python3.5
 sudo curl "https://bootstrap.pypa.io/pip/3.5/get-pip.py" -o "get-pip.py"
@@ -38,6 +39,28 @@ sudo pip install django
 #Successfully installed django-2.2.28 pytz-2022.7.1 sqlparse-0.4.3
 sudo pip install gunicorn
 #Successfully installed gunicorn-20.1.0
+
+# 003
+sudo apt-get update
+sudo apt-get install -y mc
+sudo apt-get install -f python3.5
+sudo curl "https://bootstrap.pypa.io/pip/3.5/get-pip.py" -o "get-pip.py"
+sudo python3.5 get-pip.py
+sudo pip3 install --upgrade django==2.1
+#Successfully installed django-2.1 pytz-2022.7.1
+sudo pip3 install --upgrade gunicorn
+#Successfully installed gunicorn-20.1.0
+git clone https://github.com/CerBeer/s_2_1.git /home/box/web
+cd /home/box/web
+django-admin startproject ask
+cd ask
+sudo python3.5 manage.py startapp qa
+
+git config --global user.email "stepik@example.com"
+git config --global user.name "stepik"
+git add .
+git commit -m "create ask and qa"
+
 
 sudo unlink /etc/nginx/sites-enabled/default
 sudo rm -rf /etc/nginx/sites-enabled/default
